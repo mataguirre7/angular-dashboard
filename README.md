@@ -33,7 +33,7 @@ Crear una interfaz web moderna y responsiva que permita al usuario:
 
 1. Cloná el repositorio:
    ```bash
-   git clone https://github.com/tu-usuario/angular-dashboard.git
+   git clone https://github.com/mataguirre7/angular-dashboard.git
    cd angular-dashboard
    ```
 
