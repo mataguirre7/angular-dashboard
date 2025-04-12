@@ -1,59 +1,104 @@
-# AngularDashboard
+# Angular Dashboard
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.6.
+Dashboard desarrollado con **Angular** para visualizar y gestionar datos de una API REST construida con **Node.js**, **Prisma** y **SQLite**.
 
-## Development server
+🔗 API Backend: [https://api-node-prisma-sqlite.onrender.com/api](https://api-node-prisma-sqlite.onrender.com/api)
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
+## 🚀 Tecnologías utilizadas
+
+- [Angular](https://angular.io/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Bootstrap](https://getbootstrap.com/) o [Angular Material](https://material.angular.io/) *(según corresponda)*
+- [Node.js + Express (API)](https://nodejs.org/)
+- [Prisma ORM](https://www.prisma.io/)
+- [SQLite](https://www.sqlite.org/)
+- [Render](https://render.com/) para el backend
+
+---
+
+## 🎯 Objetivo
+
+Crear una interfaz web moderna y responsiva que permita al usuario:
+
+- Visualizar registros desde la API.
+- Crear, editar y eliminar elementos.
+- Obtener feedback visual del estado de cada acción.
+- Explorar una arquitectura frontend escalable y conectada a servicios externos.
+
+---
+
+## 📦 Instalación y uso
+
+1. Cloná el repositorio:
+   ```bash
+   git clone https://github.com/tu-usuario/angular-dashboard.git
+   cd angular-dashboard
+   ```
+
+2. Instalá las dependencias:
+   ```bash
+   npm install
+   ```
+
+3. Ejecutá el proyecto:
+   ```bash
+   ng serve
+   ```
+
+4. Accedé desde tu navegador en:
+   ```
+   http://localhost:4200
+   ```
+
+---
+
+## 🔧 Configuración
+
+Si tu API tiene una URL diferente, asegurate de actualizar la base de tu servicio HTTP en Angular, por ejemplo en `environment.ts`:
+
+```ts
+export const environment = {
+  production: false,
+  apiUrl: 'https://api-node-prisma-sqlite.onrender.com/api'
+};
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 📁 Estructura general
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```
+src/
+├── app/
+│   ├── services/        # Servicios para consumir la API
+│   ├── components/      # Componentes de UI
+│   └── pages/           # Páginas principales del dashboard
+├── assets/
+├── environments/
+└── index.html
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## 🧪 Funcionalidades
 
-## Building
+- [x] Listar datos obtenidos desde la API
+- [x] Crear nuevos elementos mediante formularios
+- [x] Editar registros existentes
+- [x] Eliminar elementos
+- [x] Validaciones del lado del cliente
+- [x] Manejo de errores de red y feedback visual
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+## 📄 Licencia
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+MIT
 
-## Running unit tests
+---
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## ✍️ Autor
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Desarrollado por [Matías Aguirre](https://github.com/mataguirre7)
