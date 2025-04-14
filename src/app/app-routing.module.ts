@@ -7,16 +7,14 @@ const routes: Routes = [
     pathMatch: 'full',
     loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
   },
-  // {
-  //   path: 'courses',
-  //   pathMatch: 'full',
-  //   loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
-  // },
-  // {
-  //   path: '',
-  //   pathMatch: 'full',
-  //   loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
-  // },
+  {
+    path: 'courses',
+    loadChildren: () => import('./courses/courses.module').then((m) => m.CoursesModule),
+  },
+  {
+    path: 'enrollments',
+    loadChildren: () => import('./enrollments/enrollments.module').then((m) => m.EnrollmentsModule),
+  },
   {
     path: '**',
     redirectTo: '',

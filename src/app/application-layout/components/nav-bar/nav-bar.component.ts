@@ -35,12 +35,12 @@ export class NavBarComponent implements OnInit {
         },
       },
       {
-        label: 'About',
-        url: '/about',
+        label: 'Enrollments',
+        url: '/enrollments',
         iconClass: PrimeIcons.AMAZON,
         action: () => {
           console.log('navigating to about');
-          this.router.navigate(['/about']);
+          this.router.navigate(['/enrollments']);
         },
       },
     ];

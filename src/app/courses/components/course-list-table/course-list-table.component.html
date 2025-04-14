@@ -1,0 +1,53 @@
+<div class="card" style="width: 90vw;">
+  <p-table #dt [value]="courseList" [rowsPerPageOptions]="[5, 10, 20]" [paginator]="true" [rows]="10" [loading]="loading"
+    [tableStyle]="{ 'min-width': '50rem' }">
+    <ng-template pTemplate="header">
+      <tr></tr>
+      <tr>
+        <th style="width: 14%">
+          Title
+        </th>
+        <th style="width: 14%">
+          Instructor
+        </th>
+        <th style="width: 14%">
+          Hours
+        </th>
+        <th style="width: 14%">
+          Progress
+        </th>
+        <th style="width: 14%">
+          Action
+        </th>
+        <!-- <th style="width: 14%">
+          Precio Unitario
+        </th>
+        <th style="width: 14%">
+          Comprobante
+        </th> -->
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-order>
+      <tr>
+        <td>{{ order.title }}</td>
+        <td>{{ order.quantity }}</td>
+        <!-- <td>{{ getPaymentMethod(order.paymentMethod) }}</td> -->
+        <td>{{ order.limitDate | date : "dd/MM/yyyy" }}</td>
+        <td>{{ order.createdAt | date : "dd/MM/yyyy" }}</td>
+        <!-- <td>{{ order.unitPrice | currency : "USD" : "symbol" }}</td> -->
+        <td>{{ order.finalPrice | currency : "USD" : "symbol" }}</td>
+        <!-- <td class="text-center">
+          <i class="text-primary fa-solid fa-square-arrow-up-right" style="cursor: pointer"
+            (click)="goToImage(order)"></i>
+        </td> -->
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="emptymessage">
+      <tr>
+        <td colspan="5">No orders found.</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
