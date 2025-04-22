@@ -19,7 +19,7 @@ export class NavBarComponent implements OnInit {
       {
         label: 'Home',
         url: '/',
-        iconClass: PrimeIcons.TRASH,
+        iconClass: PrimeIcons.HOME,
         action: () => {
           console.log('navigating to home');
           this.router.navigate(['/']);
@@ -37,7 +37,7 @@ export class NavBarComponent implements OnInit {
       {
         label: 'Enrollments',
         url: '/enrollments',
-        iconClass: PrimeIcons.AMAZON,
+        iconClass: PrimeIcons.ADDRESS_BOOK,
         action: () => {
           console.log('navigating to about');
           this.router.navigate(['/enrollments']);

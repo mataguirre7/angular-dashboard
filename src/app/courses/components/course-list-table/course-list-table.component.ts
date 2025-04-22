@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CourseService } from '../../../services/courses/course.service';
 
 @Component({
   selector: 'app-course-list-table',
@@ -11,7 +12,7 @@ export class CourseListTableComponent implements OnInit {
   courseList: any[] = [];
   loading: boolean = true;
 
-  // constructor(private courseService: CourseService, private router: Router) {}
+  constructor(private courseService: CourseService, private router: Router) {}
 
   ngOnInit() {
     // this.getCourseList();
