@@ -15,16 +15,16 @@ export class CourseListTableComponent implements OnInit {
   constructor(private courseService: CourseService, private router: Router) {}
 
   ngOnInit() {
-    // this.getCourseList();
+    this.getCourseList();
   }
 
-  // getCourseList() {
-  //   this.courseService.getList().subscribe((res) => {
-  //     this.courseList = res;
-  //     this.loading = false;
-  //     console.log('Course List >>', this.courseList);
-  //   });
-  // }
+  getCourseList() {
+    this.courseService.getList().subscribe((res) => {
+      this.courseList = res;
+      this.loading = false;
+      console.log('Course List >>', this.courseList);
+    });
+  }
 
   // getPaymentMethod(method: OrderPaymentMethod) {
   //   switch (method) {
@@ -40,4 +40,8 @@ export class CourseListTableComponent implements OnInit {
   //       return 'Transferencia Bancaria'
   //   }
   // }
+
+  goToDetails(id: string) {
+    console.log("COURSE ID", id);
+  }
 }
